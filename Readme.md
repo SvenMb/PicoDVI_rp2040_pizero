@@ -3,6 +3,8 @@ About this fork:
 - added Waveshare RP2040 PiZero and made it default
 - add precompiled uf2 files for direkt upload
 
+![Waveshare RP2040 PiZero](img/rp2040_pizero.png)
+
 SvenMb in june 2024
 
 ---
