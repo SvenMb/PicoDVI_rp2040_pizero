@@ -7,8 +7,9 @@
 
 #include "dvi_serialiser.h"
 
+// be aware that this is already set in CMakeLists.txt!
 #ifndef DVI_DEFAULT_SERIAL_CONFIG
-#define DVI_DEFAULT_SERIAL_CONFIG pico_sock_cfg
+#define DVI_DEFAULT_SERIAL_CONFIG pizero_cfg
 #endif
 
 #ifndef DVI_DEFAULT_PIO_INST
@@ -49,6 +50,15 @@ static const struct dvi_serialiser_cfg picodvi_pmod0_cfg = {
 
 // ----------------------------------------------------------------------------
 // Other boards
+
+// Waveshare RP2040 PiZero
+static const struct dvi_serialiser_cfg pizero_cfg = {
+	.pio = DVI_DEFAULT_PIO_INST,
+	.sm_tmds = {0, 1, 2},
+	.pins_tmds = {26, 24, 22},
+	.pins_clk = 28,
+	.invert_diffpairs = false
+};
 
 // The not-HDMI socket on SparkX HDMI carrier board with RP2040 MicroMod
 // inserted.
